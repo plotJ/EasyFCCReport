@@ -1,5 +1,7 @@
 # Easy FCC Report
 
+![App Screenshot](app.png)
+
 A Chrome extension to streamline the process of reporting spam calls to the FCC.
 
 ## Features
@@ -28,6 +30,8 @@ A Chrome extension to streamline the process of reporting spam calls to the FCC.
    - Enter the spam phone number
    - Click "Fill Out Complaint"
    - Verify the information and submit
+
+![FCC Form Screenshot](fcc.png)
 
 ## License
 MIT License - see LICENSE file for details
