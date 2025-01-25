@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      width: 300px; 
+      padding: 15px;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    .form-group { 
+      margin-bottom: 15px; 
+    }
+    label { 
+      display: block; 
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    input, select { 
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .button-group button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: white;
+    }
+    .go-to-fcc {
+      background: #666;
+    }
+    .fill-complaint {
+      background: #0066cc;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .first-time-notice {
+      display: none;
+      color: #cc0000;
+      margin-bottom: 10px;
+    }
+    .guide-section {
+      margin-top: 15px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+    .guide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .guide-header h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .guide-content {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .guide-content.collapsed {
+      display: none;
+    }
+    .guide-content ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .guide-content li {
+      margin-bottom: 8px;
+    }
+    .collapse-icon {
+      font-size: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="firstTimeNotice" class="first-time-notice">
+    Please set up your information in Settings first
+  </div>
+  
+  <div class="form-group">
+    <label for="spamNumber">Spam Phone Number:</label>
+    <input type="tel" id="spamNumber" pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" required>
+    <div style="color: #cc0000; font-size: 12px; margin-top: 4px;">
+      Must include hyphens (XXX-XXX-XXXX)
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="callDetails">Call Details (Optional):</label>
+    <input type="text" id="callDetails" placeholder="Additional details about this call">
+  </div>
+
+  <div class="button-group">
+    <button id="goToFcc" class="go-to-fcc">Go to FCC</button>
+    <button id="fillComplaint" class="fill-complaint">Fill Out Complaint</button>
+  </div>
+
+  <div class="form-group">
+    <button id="settings" style="background: #666; width: 100%; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">Settings</button>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-header" id="guideHeader">
+      <h3>Set Up Guide</h3>
+      <span class="collapse-icon">−</span>
+    </div>
+    <div class="guide-content" id="guideContent">
+      <ol>
+        <li>Click on settings to input your personal info that will be used for filing the FCC complaint. This information is stored locally, and we do not have access to it.</li>
+        <li>Click the button to go to the FCC Website</li>
+        <li>Enter the phone number and click "Fill Out Complaint."</li>
+        <li>Verify that information was filled out properly.</li>
+        <li>Make any adjustments to the default settings to speed up further FCC complaints.</li>
+        <li>Email any complaints or suggestions to the developer at dev@easyfccreport.com</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

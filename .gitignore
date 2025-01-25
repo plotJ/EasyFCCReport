@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Build directories
+dist/
+build/
+
+# Node modules
+node_modules/
+
+# Chrome Extension packaging
+*.zip
+*.crx
+*.pem
